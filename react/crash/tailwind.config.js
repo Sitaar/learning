@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,css}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        burtons:'burtons'
+        burtons:'burtons',
+        notosans:'notosans'
       }
     },
   },

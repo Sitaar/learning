@@ -11,6 +11,7 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  // trailingSlash: false,
   // output: {
   //   path: path.resolve(__dirname, "build"),
   //   filename: "build.[contenthash:10].js",

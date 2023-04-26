@@ -1,31 +1,33 @@
+"use client"
 import React, { useEffect } from "react";
-import { useParams,useMatch } from "react-router-dom";
-import { data } from "./data";
+// import { useParams,useMatch } from "react-router-dom";
+import { data } from "../../data";
 import Image from "next/image";
 // import { match } from "assert";
-interface Props {
-    params: any;
-  }
-function NavItem() {
-  const { id } = useParams();
-  const match = useMatch('/navList/:id')
-// match =  {
-//     "params": {
-//         "id": "8"
-//     },
-//     "pathname": "/navList/8",
-//     "pathnameBase": "/navList/8",
-//     "pattern": {
-//         "path": "/navList/:id",
-//         "caseSensitive": false,
-//         "end": true
-//     }
+// interface Props {
+//   params: any;
 // }
-  const item = data.result.result.list.find(
-    (item) => item.id.toString() === id
-  );
+function NavItem({ params }: { params: { slug: string } }) {
+  console.log(params.slug);
+    const id = params.slug[0];
+  //   const match = useMatch('/navList/:id')
+  // match =  {
+  //     "params": {
+  //         "id": "8"
+  //     },
+  //     "pathname": "/navList/8",
+  //     "pathnameBase": "/navList/8",
+  //     "pattern": {
+  //         "path": "/navList/:id",
+  //         "caseSensitive": false,
+  //         "end": true
+  //     }
+  // }
+    const item=data.result.result.list.find(
+      (item) => item.id.toString() === id
+    );
   useEffect(() => {
-    console.log(id, item,match, "route");
+    console.log(id ,item, "route");
   });
   return (
     <div>

@@ -1,23 +1,19 @@
 "use client";
 import { AiFillWechat, AiOutlineWeibo, AiOutlineQq } from "react-icons/ai";
-import { useState } from "react";
-import dev from "../../public/dev-ed-wave.png";
-import design from "../../public/design.png";
-import code from "../../public/code.png";
-import consulting from "../../public/consulting.png";
-import web1 from "../../public/web1.png";
-import web2 from "../../public/web2.png";
-import web3 from "../../public/web3.png";
-import web4 from "../../public/web4.png";
-import web5 from "../../public/web5.png";
-import web6 from "../../public/web6.png";
+import dev from "../public/dev-ed-wave.png";
+import design from "../public/design.png";
+import code from "../public/code.png";
+import consulting from "../public/consulting.png";
+import web1 from '../public/web1.png';
+import web2 from "../public/web2.png";
+import web3 from "../public/web3.png";
+import web4 from "../public/web4.png";
+import web5 from "../public/web5.png";
+import web6 from "../public/web6.png";
 import Image from "next/image";
 
-import { CardInfo, ServiceCard } from "./ServiceCard";
-import SelectedCard from "./components/SelectedCard";
+import { CardInfo, ServiceCard } from "./(components)/ServiceCard";
 export default function HomePage() {
-  const [user, setUser] = useState("sitar");
-  const changeUser = { name: user, comand: (name: string) => setUser(name) };
   const cardsInfo: Array<CardInfo> = [
     {
       id: "01",
@@ -54,7 +50,7 @@ export default function HomePage() {
   return (
     <>
       <section className="min-h-screen">
-          <SelectedCard />
+          {/* <SelectedCard /> */}
         <div className="text-center p-10 py-10 ">
           <h2 className="text-5xl text-teal-600 dark:text-teal-400 py-2 font-medium md:text-6xl">
             Dimitri Marco

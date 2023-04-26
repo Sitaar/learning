@@ -1,7 +1,7 @@
-import React from "react";
-import { createRef, useRef, useState, useEffect } from "react";
+'use client'
+import React,{ useRef, useState } from "react";
 import UserSetting from "./UserSetting";
-import CountTest, { ICountTestHandler } from "../CountTest";
+import CountTest, { ICountTestHandler } from "./CountTest";
 import TestInput from "./TestInput";
 import TestInputBtn from "./TestInputBtn";
 import "./style.css";
@@ -15,7 +15,7 @@ const SelectedCard = () => {
   const countTestRef = useRef<ICountTestHandler>(null!);
   const TestInputRef = useRef<any>(null!);
   return (
-    <div className="shadow-lg rounded-xl dark:bg-white min-h-40">
+    <div className="shadow-lg rounded-xl dark:bg-white min-h-40 mx-10">
       <nav className="flex items-center h-10 rounded-t-lg bg-gradient-to-b from-teal-400 shadow-lg px-3">
         {menu.map((item) => (
           <div

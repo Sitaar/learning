@@ -17,3 +17,10 @@ a{
   font-family: 'burtons';
   src: url('../public/Burtons.otf');
 }
+@font-face {
+  font-family: 'notosans';
+  src: url('../public/NotoSans-Regular.ttf');
+}
+.active {
+  color: red!important;
+}
